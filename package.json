@@ -19,7 +19,6 @@
   "homepage": "https://github.com/tony-xlh/Barcode-Reading-Server-Express#readme",
   "dependencies": {
     "barcode4nodejs": "^9.6.22",
-    "dynamsoft-javascript-barcode": "^9.6.20",
     "dynamsoft-node-barcode": "^8.8.7",
     "express": "^4.18.2"
   }
