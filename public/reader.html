@@ -30,6 +30,10 @@
       Load local image:
       <input type="file" id="barcodeFile" onchange="loadImageFromFile();" accept=".jpg,.jpeg,.png,.bmp" />
     </div>
+    <select id="engine">
+      <option value="DBRCPP">C++ Version</option>
+      <option value="DBRWASM">WASM Version</option>
+    </select>
     <button onclick="decode()">Decode</button>
     <span id="status"></span>
   </div>
@@ -57,6 +61,7 @@
 
     function decode(){
       document.getElementById("status").innerText = "decoding...";
+      let engine = document.getElementById("engine").selectedOptions[0].value;
       let url = document.getElementById("url").value + "/readBarcodes";
       console.log(url);
       let xhr = new XMLHttpRequest();
@@ -64,6 +69,7 @@
       let dataURL = img.src;
       let base64 = dataURL.substring(dataURL.indexOf(",")+1,dataURL.length);
       pay_load["base64"] = base64;
+      pay_load["SDK"] = engine;
       
       xhr.open('POST', url);
       xhr.setRequestHeader('content-type', 'application/json'); 
