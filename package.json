@@ -1,0 +1,23 @@
+{
+  "name": "barcode-reading-server-express",
+  "version": "1.0.0",
+  "description": "An HTTP server app which provides an API interface to read barcodes in Express",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tony-xlh/Barcode-Reading-Server-Express.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tony-xlh/Barcode-Reading-Server-Express/issues"
+  },
+  "homepage": "https://github.com/tony-xlh/Barcode-Reading-Server-Express#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
